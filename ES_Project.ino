@@ -107,13 +107,10 @@ void loop() {
       handleScheduling();
   }
 
-
-
-
   updateEnergyStatsOnFirebase();
 }
 
-
+//function to handle scheduling
 void handleScheduling() {
   unsigned long currentTime = millis();
 
@@ -143,7 +140,7 @@ void handleScheduling() {
   }
 }
 
-
+//Function to control manually via firebase
 void checkManualControlFromFirebase() {
   for (int i = 0; i < 4; i++) {
     String path = "/ES_Project/S" + String(i + 1); 
